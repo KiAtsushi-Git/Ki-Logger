@@ -26,10 +26,11 @@ project_root/
 │   ├── app.py           # Flask-приложение для отображения логов
 │   ├── templates/
 │   │   ├── index.html
-│   │   ├── names.html
-│   │   └── files.html
+│   │   ├── base.html
+│   │   ├── by_file.html
+│   │   └── by_name.html
 │   └── static/
-│       └── styles.css
+│       └── app.js
 ├── logs/                # создаётся автоматически
 │   └── default/
 │       └── 2025-07-23.log
