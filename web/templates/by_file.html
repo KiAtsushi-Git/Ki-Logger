@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Логи по {{ "именам" if request.path.endswith("by-name") else "файлам" }}</h2>
+<div id="log-container" style="display: flex; flex-wrap: wrap; gap: 15px;"></div>
+<script src="/static/app.js"></script>
+<script>
+const api = "{{ '/api/logs/by-name' if request.path.endswith('by-name') else '/api/logs/by-file' }}";
+loadLogBlocks(api);
+</script>
+{% endblock %}

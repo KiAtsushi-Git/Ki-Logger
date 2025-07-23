@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>📑 Логи</title>
+    <style>
+        body {
+            font-family: monospace, monospace;
+            background-color: #121212;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 20px 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
+        .nav {
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
+        .nav a {
+            margin-right: 20px;
+            color: #7abfff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        .nav a:hover {
+            color: #ffc107;
+        }
+        .block {
+            background-color: #1e1e1e;
+            margin-bottom: 20px;
+            border-left: 4px solid #7abfff;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ffc107;
+            margin-bottom: 8px;
+            user-select: none;
+        }
+        .log-line {
+            padding: 4px 0;
+            border-bottom: 1px dashed #333;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .info {
+            color: #a0ffa0;
+        }
+        .warning {
+            color: #ffeb3b;
+        }
+        .error {
+            color: #ff6b6b;
+        }
+        .square-block {
+            width: 300px;
+            height: 50px;
+            background-color: #292929;
+            color: #7abfff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            cursor: pointer;
+            user-select: none;
+            font-weight: bold;
+            margin-bottom: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .square-block:hover {
+            background-color: #3a3a3a;
+        }
+        .log-content {
+            background-color: #1e1e1e;
+            margin-top: 8px;
+            padding: 8px;
+            border-radius: 6px;
+            color: #f0f0f0;
+            font-size: 0.85em;
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+            width: 100%;
+        }
+        .line-header {
+            font-weight: bold;
+            margin-top: 8px;
+            color: #7abfff;
+        }
+        .log-line.indent {
+            margin-left: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <a href="/">🏠 Главная</a>
+            <a href="/by-name">🔤 Имена</a>
+            <a href="/by-file">📄 Файлы</a>
+        </nav>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
